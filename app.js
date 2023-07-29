@@ -84,11 +84,22 @@ const app = new Vue({
     chartTitle: "回答分佈統計圖",    // 使用英文名稱並給定初始值
     xAxisLabel: "分數區間",    // 使用英文名稱並給定初始值
     yAxisLabel: "次數",    // 使用英文名稱並給定初始值
+    isLoading: false,
+    scoreData: {
+      score: 0 // 預設值，您可以根據回傳的實際分數進行修改
+    },
+  },
+  computed: {
+    progressWidth() {
+      // 根據回傳的 score 值計算進度條的寬度
+      // 假設進度條的最大值為 100，您也可以根據需要進行調整
+      return (this.scoreData.score / 100) * 100 + '%';
+    },
   },
   methods: {
     submitForm() {
       if (this.currentPage === this.totalQuestions - 1) {
-        this.currentPage++;
+        this.isLoading = true;
         //this.message = this.answers;
         // 將所有回答從字符串轉換為數字
         for (const key in this.answers) {
@@ -104,12 +115,15 @@ const app = new Vue({
         })
           .then((response) => response.json())
           .then((data) => {
+            this.isLoading = false;
             console.log(data);
+            this.currentPage++;
             //this.currentPage++;
             this.scoreData = data;
             this.prepareChartData();
           })
           .catch((error) => {
+            this.isLoading = false;
             console.error("Error:", error);
             //this.message = "發生錯誤，請稍後再試。";
           });
