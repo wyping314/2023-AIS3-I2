@@ -1,6 +1,22 @@
-Vue.component('bar-chart', {
+/*Vue.component('bar-chart', {
   extends: VueChartJs.Bar,
   props: ['data'],
+  mounted() {
+    this.renderChart(this.data, {
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        y: {
+          beginAtZero: true,
+          stepSize: 1,
+        },
+      },
+    });
+  },
+});*/
+Vue.component('bar-chart', {
+  extends: VueChartJs.Bar,
+  props: ['data', 'chartTitle', 'xAxisLabel', 'yAxisLabel'],
   mounted() {
     this.renderChart(this.data, {
       responsive: true,
@@ -11,9 +27,49 @@ Vue.component('bar-chart', {
           stepSize: 1,
         },
       },
+      plugins: {
+        title: {
+          display: true,
+          text: this.chartTitle, // 您可以將標題設定為由父組件傳遞的屬性
+          font: {
+            size: 24, // 標題字體大小
+          },
+        },
+        legend: {
+          display: true,
+          labels: {
+            font: {
+              size: 14, // 圖例字體大小
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: this.xAxisLabel, // 您可以將x軸單位設定為由父組件傳遞的屬性
+            font: {
+              size: 14, // x軸單位字體大小
+            },
+          },
+        },
+        y: {
+          title: {
+            display: true,
+            text: this.yAxisLabel, // 您可以將y軸單位設定為由父組件傳遞的屬性
+            font: {
+              size: 14, // y軸單位字體大小
+            },
+          },
+          beginAtZero: true,
+          stepSize: 1,
+        },
+      },
     });
   },
 });
+
 
 // 創建 Vue 實例
 const app = new Vue({
@@ -25,6 +81,9 @@ const app = new Vue({
     message: "",
     scoreData: null,
     chartData: null, // 新增一個用於顯示長條圖的資料
+    chartTitle: "回答分佈統計圖",    // 使用英文名稱並給定初始值
+    xAxisLabel: "分數區間",    // 使用英文名稱並給定初始值
+    yAxisLabel: "次數",    // 使用英文名稱並給定初始值
   },
   methods: {
     submitForm() {
