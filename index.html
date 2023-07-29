@@ -24,32 +24,11 @@
 <body >
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-      <a class="navbar-brand" href="#">社群媒體詐騙帳號測驗</a>
+      <a class="navbar-brand" href="#">Detecting Social Media Scam Accounts</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
 
-      </div>
     </nav>
     <!-- <h1>Questionnaire Form</h1> -->
     <form @submit.prevent="submitForm" style="margin: 20px;">
@@ -60,7 +39,7 @@
           <div class="d-flex justify-content-center">
             <img src="./img/ais3.gif" alt="Image" width="350" height="350">
           </div><br/><br/>
-          <label class="form-label h2 d-flex justify-content-center">測驗名稱</label><br/>
+          <label class="form-label h2 d-flex justify-content-center">社群媒體詐騙帳號測驗</label><br/>
           <br/><br/>
           <button class="btn btn-primary btn-block" @click="nextPage">開始測驗</button>
         </div>
@@ -103,8 +82,8 @@
       <div class="container d-flex justify-content-center">
         <div v-if="currentPage === 2">
             <div class="d-flex justify-content-center">
-              <img src="https://cdn-icons-png.flaticon.com/256/9621/9621087.png" width="200" height="200" alt="Image">
-            </div>
+              <img src="https://cdn-icons-png.flaticon.com/256/2515/2515249.png" width="200" height="200" alt="Image">
+            </div><br/>
             <label class="form-label h3" for="Q2">Q2. 肚子餓的您打算去吃晚餐，順便把晚餐內容發到限動，那這餐的價格約為？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
               <div class="mb-3">
@@ -136,8 +115,9 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/488/488917.png" width="180" height="180" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q3">Q3.以下資料有幾項您有在社群網站上填寫？（1. 學歷與工作 2. 住過的地方
-            3. 聯絡與基本狀況 4. 家人和情感狀況）</label><br/><br/>
+          <label class="form-label h4" for="Q3">Q3.以下資料有幾項您有在社群網站上填寫？<br/>（1. 學歷與工作 2. 住過的地方
+            3. 聯絡與基本狀況 4. 家人和情感狀況）</label>
+            <br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
@@ -173,7 +153,7 @@
       <div class="container d-flex justify-content-center">
         <div v-if="currentPage === 4">
           <div class="d-flex justify-content-center">
-            <img src="https://cdn-icons-png.flaticon.com/256/1974/1974118.png" width="200" height="200" alt="Image">
+            <img src="https://cdn-icons-png.flaticon.com/256/5904/5904332.png" width="200" height="200" alt="Image">
           </div><br/><br/>
           <label class="form-label h3" for="Q4">Q4. 您在社交媒體或網路平台上貼文的照片中出現親人或朋友的比例是？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
@@ -213,7 +193,7 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/8955/8955033.png" width="200" height="200" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q5">Q5. 您在社交媒體或網路平台上是否提及自己的工作：</label><br/><br/>
+          <label class="form-label h3" for="Q5">Q5. 您在社交媒體或網路平台上是否提及自己的工作？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">

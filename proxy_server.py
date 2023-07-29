@@ -8,7 +8,7 @@ CORS(app, resources={r"/proxy": {"origins": "http:/localhost:8888"}})  # 允許 
 
 @app.route('/proxy', methods=['POST'])
 def proxy():
-    url = 'https://script.google.com/macros/s/AKfycbxtWAZdjwGCHtwATmBMEEqQ1lvQrgIWdGhMLZyTW-8xR6oJ_AL7j7uyyO6cksTS15jS/exec'
+    url = 'https://script.google.com/macros/s/AKfycbwmSNTmgglS5bUtqtkQPGF7MmjXOqdJpLUzL6xZm7nuQn0Wj3LHNkVh_JAj7ca20Mo/exec'
     data = request.get_json()
     response = requests.post(url, json=data)
 

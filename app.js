@@ -88,6 +88,7 @@ const app = new Vue({
   methods: {
     submitForm() {
       if (this.currentPage === this.totalQuestions - 1) {
+        this.currentPage++;
         //this.message = this.answers;
         // 將所有回答從字符串轉換為數字
         for (const key in this.answers) {
@@ -96,7 +97,7 @@ const app = new Vue({
           }
         }
 
-        fetch("https://script.google.com/macros/s/AKfycbxtWAZdjwGCHtwATmBMEEqQ1lvQrgIWdGhMLZyTW-8xR6oJ_AL7j7uyyO6cksTS15jS/exec", {
+        fetch("https://script.google.com/macros/s/AKfycbwmSNTmgglS5bUtqtkQPGF7MmjXOqdJpLUzL6xZm7nuQn0Wj3LHNkVh_JAj7ca20Mo/exec", {
           method: "POST",
           headers: {},
           body: JSON.stringify(this.answers),
@@ -104,7 +105,7 @@ const app = new Vue({
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            this.currentPage++;
+            //this.currentPage++;
             this.scoreData = data;
             this.prepareChartData();
           })
