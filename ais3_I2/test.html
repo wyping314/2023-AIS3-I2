@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,   initial-scale=1.0">
+    <title>test api</title>
+</head>
+
+<body>
+    <script>
+        async function getData() {
+            const form = {
+                    "Q1": 1,
+                    "Q2": 2,
+                    "Q3": 2,
+                    "Q4": 2,
+                    "Q5": 2,
+                    "Q6": 2,
+                    "Q7": 2,
+                    "Q8": 2,
+                    "Q9": 2,
+                    "Q10": 2,
+
+                }
+                // 3. Post通信
+            const formResponse = await fetch("https://script.google.com/macros/s/AKfycbyJssGjPcix_vmdo50JtZF3n0jMBeKsJ0vPwXhXtYjviSSu0kCyotLBGRE66wIrH5m_/exec", {
+                method: "POST",
+                body: JSON.stringify(form)
+            });
+
+            console.log(await formResponse.json());
+        }
+        getData();
+    </script>
+</body>
+
+</html>
