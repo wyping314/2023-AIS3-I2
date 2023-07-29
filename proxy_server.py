@@ -1,26 +1,3 @@
-'''from flask import Flask, request, jsonify
-from flask_cors import CORS
-import requests
-
-app = Flask(__name__)
-CORS(app, resources={r"/proxy": {"origins": "http://localhost:8888"}})  # 允許 http://localhost:8888 的請求
-
-@app.route('/proxy', methods=['POST'])
-def proxy():
-    url = 'https://script.google.com/macros/s/AKfycbwGplGYWjBJQoTxD7EZyjK4C_kF-oHJ8yHYfdX5xDteXW3Qts46QPKOgJxPIZUZMpw/exec'
-    data = request.get_json()
-    response = requests.post(url,pro json=data)
-    
-    # 修改回應的標頭，加入 "Access-Control-Allow-Origin" header
-    response_headers = {
-        "Access-Control-Allow-Origin": "http://localhost:8888",
-        "Content-Type": "application/json"
-    }
-    
-    return jsonify(response.json()), response.status_code, response_headers
-
-if __name__ == '__main__':
-    app.run(host='localhost', port=8888)'''
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
