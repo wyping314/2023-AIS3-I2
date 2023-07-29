@@ -16,7 +16,7 @@
     @media (max-width: 767px) {
       /* 在螢幕寬度小於767px時套用這些CSS */
       .col-md-6 {
-        width: 85%;
+        width: 100%;
       }
     }
   </style>
@@ -427,7 +427,7 @@
       <div class="container d-flex justify-content-center">
         <div v-if="currentPage === 11" class="row mt-4">
           <!-- 左側部分 -->
-          <div class="col-md-6 d-flex justify-content-center my-4" style="width: 400px;">
+          <div class="col-md-6 d-flex justify-content-center my-4" style="width: 450px;">
             <!-- 引入長條圖元件並傳遞後端傳來的 JSON 資料 -->
             <div class="card" style="width: 100%;">
               <div class="card-body">
@@ -442,10 +442,10 @@
             </div>
           </div>
           <!-- 右側部分 -->
-          <div class="col-md-6 d-flex flex-column justify-content-center align-items-end my-4" style="width: 400px;">
+          <div class="col-md-6 d-flex flex-column justify-content-center align-items-end my-4" style="width: 450px;">
             <!-- 顯示分數 -->
             <div class="card" style="background-color: #EBEBEB;">
-              <img class="card-img-top" src="./img/thanks.gif" alt="Card image" style="width: 110%">
+              <img class="card-img-top" src="./img/thanks.gif" alt="Card image" style="width: 100%">
               <div class="card-body">
                 <h3 class="card-title">結果分析</h4>
                 <h4 class="mb-4 card-text">您的分數：{{ scoreData.score }}</h3>
