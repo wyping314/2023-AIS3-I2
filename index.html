@@ -24,23 +24,20 @@
 <body >
   <div id="app">
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
-      <a class="navbar-brand" href="#">Detecting Social Media Scam Accounts</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand" href="#">AIS3-I2</a>
 
     </nav>
     <!-- <h1>Questionnaire Form</h1> -->
     <form @submit.prevent="submitForm" style="margin: 20px;">
       <!-- 使用 v-if 控制顯示不同的問題頁 -->
       <!-- 開始畫面 -->
-      <div class="container mt-3 d-flex justify-content-center">
+      <div class="container mt-2 d-flex justify-content-center">
         <div v-if="currentPage === 0">
           <div class="d-flex justify-content-center">
             <img src="./img/ais3.gif" alt="Image" width="350" height="350">
           </div><br/><br/>
-          <label class="form-label h2 d-flex justify-content-center">社群媒體詐騙帳號測驗</label><br/>
-          <br/><br/>
+          <label class="form-label h3 d-flex justify-content-center">【社群媒體詐騙帳號測驗】</label><br/>
+          <br/>
           <button class="btn btn-primary btn-block" @click="nextPage">開始測驗</button>
         </div>
       </div>
