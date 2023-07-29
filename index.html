@@ -16,7 +16,7 @@
     @media (max-width: 767px) {
       /* 在螢幕寬度小於767px時套用這些CSS */
       .col-md-6 {
-        width: 100%;
+        width: 350px;
       }
     }
   </style>
@@ -72,22 +72,27 @@
           <div class="d-flex justify-content-center">
             <img src="./img/Q1.png" alt="Image" width="250" height="250">
           </div>
-          <label class="form-label h3" for="Q1">Q1. 您是否更喜歡使用英文名字而非本名？</label><br/><br/><br/>
+          <label class="form-label h3" for="Q1">Q1. 您在社群軟體上使用的名字是？</label><br/><br/><br/>
           <!-- <input type="text" id="Q1" class="form-control" v-model="answers.Q1" required> -->
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q1" value="1"> A. 比起中文名我更喜歡英文名
+                <input type="radio" v-model="answers.Q1" value="1"> A. 中文名字直翻成英文，就像護照
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q1" value="2"> B. 我沒有特別喜歡哪一個
+                <input type="radio" v-model="answers.Q1" value="2"> B. 英文名字
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q1" value="3"> C. 比起英文名我更喜歡中文名
+                <input type="radio" v-model="answers.Q1" value="3"> C. 中文名字
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="radio">
+                <input type="radio" v-model="answers.Q1" value="4"> D. 其他語言或符號
               </label>
             </div>
           </div><br/>
@@ -100,19 +105,19 @@
             <div class="d-flex justify-content-center">
               <img src="https://cdn-icons-png.flaticon.com/256/9621/9621087.png" width="200" height="200" alt="Image">
             </div>
-            <label class="form-label h3" for="Q2">Q2. 在選擇產品時，你是否更看重產品的聲譽，而不是僅僅注重價格？</label><br/><br/>
+            <label class="form-label h3" for="Q2">Q2. 肚子餓的您打算去吃晚餐，順便把晚餐內容發到限動，那這餐的價格約為？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
               <div class="mb-3">
-                <label class="radio"><input type="radio" v-model="answers.Q2" value="1"> A. 比起價格，我更重視於產品的聲譽</label>
+                <label class="radio"><input type="radio" v-model="answers.Q2" value="1"> A. 500 元以上</label>
               </div>
               <div class="mb-3">
-                <label class="radio"><input type="radio" v-model="answers.Q2" value="2"> B. 產品聲譽與價格同等重要</label>
+                <label class="radio"><input type="radio" v-model="answers.Q2" value="2"> B. 200 元到 500 元</label>
               </div>
               <div class="mb-3">
-                <label class="radio"><input type="radio" v-model="answers.Q2" value="3"> C. 比起產品的聲譽，我更重視於產品合理的價格</label>
+                <label class="radio"><input type="radio" v-model="answers.Q2" value="3"> C. 100 元到 200 元</label>
               </div>
               <div class="mb-3">
-                <label class="radio"><input type="radio" v-model="answers.Q2" value="4"> D. 沒有特別偏好</label>
+                <label class="radio"><input type="radio" v-model="answers.Q2" value="4"> D. 100 元以下</label>
               </div><br/>
               <div class="row">
                 <div class="col">
@@ -131,21 +136,27 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/488/488917.png" width="180" height="180" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q3">Q3.你是否喜歡在社交平台上公開自己相關狀態 (生日、居住地、就讀等資訊)？</label><br/><br/>
+          <label class="form-label h3" for="Q3">Q3.以下資料有幾項您有在社群網站上填寫？（1. 學歷與工作 2. 住過的地方
+            3. 聯絡與基本狀況 4. 家人和情感狀況）</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q3" value="1"> A. 是的，我喜歡在社交平台上公開相關資訊，讓他人更容易了解我
+                <input type="radio" v-model="answers.Q3" value="1"> A. 4 項
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q3" value="2"> B. 有時候會公開一些相關資訊，視情況而定
+                <input type="radio" v-model="answers.Q3" value="2"> B. 3 項
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q3" value="3"> C. 不會在社交平台上公開相關資訊，保持隱私為主
+                <input type="radio" v-model="answers.Q3" value="3"> C. 2 項
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="radio">
+                <input type="radio" v-model="answers.Q3" value="4"> C. 1 項
               </label>
             </div><br/>
           <div class="row">
@@ -164,26 +175,26 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/1974/1974118.png" width="200" height="200" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q4">Q4. 您在社交媒體或網路平台上貼文的照片主要是？</label><br/><br/>
+          <label class="form-label h3" for="Q4">Q4. 您在社交媒體或網路平台上貼文的照片中出現親人或朋友的比例是？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q4" value="1"> A: 多為自拍照
+                <input type="radio" v-model="answers.Q4" value="1"> A: 10% 以下 
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q4" value="2"> B: 均衡，各占一半，沒有那一方特別多
+                <input type="radio" v-model="answers.Q4" value="2"> B: 10% 到 20%
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q4" value="3"> C: 多為他人拍攝的照片
+                <input type="radio" v-model="answers.Q4" value="3"> C: 20% 到 40%
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q4" value="4"> D: 幾乎不貼照片
+                <input type="radio" v-model="answers.Q4" value="4"> D: 40% 以上或沒在發文
               </label>
             </div><br/>
           <div class="row">
@@ -202,21 +213,26 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/8955/8955033.png" width="200" height="200" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q5">Q5. 在線上交流與分享對您而言是否重要？</label><br/><br/>
+          <label class="form-label h3" for="Q5">Q5. 您在社交媒體或網路平台上是否提及自己的工作：</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q5" value="1"> A: 我經常與他人分享我所學習的專業知識
+                <input type="radio" v-model="answers.Q5" value="1"> A: 從不提及
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q5" value="2"> B: 我有時會在線上交流與分享，但頻率不高
+                <input type="radio" v-model="answers.Q5" value="2"> B: 很少提及 (10% 以下的貼文與工作相關)
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q5" value="3"> C: 我不常與他人分享我所學習的專業知識
+                <input type="radio" v-model="answers.Q5" value="3"> C: 偶爾提及 (10% 到 30% 的貼文與工作相關)
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="radio">
+                <input type="radio" v-model="answers.Q5" value="4"> D: 經常提及 (30% 以上的貼文與工作相關)
               </label>
             </div><br/>
           <div class="row">
@@ -236,26 +252,26 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/4187/4187152.png" width="200" height="180" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q6">Q6. 在社交平台上與好友之間的互動頻率是？</label><br/><br/>
+          <label class="form-label h3" for="Q6">Q6. 請問您在社交平台上與好友之間的互動頻率是？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q6" value="1"> A: 時常互動，基本每篇貼文都會回應或按讚 
+                <input type="radio" v-model="answers.Q6" value="1"> A: 很少互動，幾乎不回應或按讚
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q6" value="2"> B: 有時互動，大約幾個月回應或按讚幾篇貼文
+                <input type="radio" v-model="answers.Q6" value="2"> B: 偶爾互動，不經常回應或按讚，久久幾次 (每篇文章好友按讚分享留言數 < 5)
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q6" value="3"> C:偶爾互動，不經常回應或按讚，久久幾次
+                <input type="radio" v-model="answers.Q6" value="3"> C:有時互動，大約幾個月回應或按讚幾篇貼文
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q6" value="4"> D:很少互動，幾乎不回應或按讚
+                <input type="radio" v-model="answers.Q6" value="4"> D:時常互動，基本每篇貼文都會回應或按讚
               </label>
             </div><br/>
           <div class="row">
@@ -275,21 +291,26 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/9125/9125448.png" width="200" height="200" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q7">Q7. 你覺得你跟平台上好友有功同之處嗎？</label><br/><br/>
+          <label class="form-label h3" for="Q7">Q7. 網站上與您有最多共同好友者，共同好友佔總好友數的比例？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q7" value="1"> A: 完全不相似，我和好友幾乎沒有共同之處 
+                <input type="radio" v-model="answers.Q7" value="1"> A: 大約 < 5% 
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q7" value="2"> B: 各占一半，我和一些好友有共同之處
+                <input type="radio" v-model="answers.Q7" value="2"> B: 大約 6%～10%
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q7" value="3"> C: 完全相似，我和好友擁有許多共同之處
+                <input type="radio" v-model="answers.Q7" value="3"> C: 大約 10%～25%
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="radio">
+                <input type="radio" v-model="answers.Q7" value="4"> D: 大約 > 25%
               </label>
             </div><br/>
           <div class="row">
@@ -309,21 +330,26 @@
           <div class="d-flex justify-content-center">
             <img src="https://cdn-icons-png.flaticon.com/256/610/610128.png" width="200" height="200" alt="Image">
           </div><br/><br/>
-          <label class="form-label h3" for="Q8">Q8. 你的社交帳號使用歷史範圍為何？</label><br/><br/>
+          <label class="form-label h3" for="Q8">Q8. 請問您的社交帳號創辦時間距今多久？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q8" value="1"> A: 相對較新，剛創辦不久
+                <input type="radio" v-model="answers.Q8" value="1"> A: 一年左右
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q8" value="2"> B: 中等歷史，使用時間大約大眾相近
+                <input type="radio" v-model="answers.Q8" value="2"> B: 兩年到三年間
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q8" value="3"> C:創辦已久，已經有一段時間
+                <input type="radio" v-model="answers.Q8" value="3"> C:三年到五年間
+              </label>
+            </div>
+            <div class="mb-3">
+              <label class="radio">
+                <input type="radio" v-model="answers.Q8" value="4"> D:五年以上
               </label>
             </div><br/>
           <div class="row">
@@ -343,26 +369,26 @@
           <div class="d-flex justify-content-center">
             <img src="./img/Q9.png" width="250" height="240" alt="Image">
           </div><br/>
-          <label class="form-label h3" for="Q9">Q9. 請問您目前的薪水屬於哪個區間？</label><br/><br/>
+          <label class="form-label h3" for="Q9">Q9. 請問您目前的工作狀況是？</label><br/><br/>
           <div class="d-flex justify-content-center flex-column">
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q9" value="1"> A: 遠高於平均薪水
+                <input type="radio" v-model="answers.Q9" value="1"> A: 跨國工作者
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q9" value="2"> B: 略高於平均薪水
+                <input type="radio" v-model="answers.Q9" value="2"> B: 國內高層主管
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q9" value="3"> C: 接近平均薪水
+                <input type="radio" v-model="answers.Q9" value="3"> C: 一般工作人員
               </label>
             </div>
             <div class="mb-3">
               <label class="radio">
-                <input type="radio" v-model="answers.Q9" value="4"> D: 小於平均薪水
+                <input type="radio" v-model="answers.Q9" value="4"> D: 其他或非工作階段
               </label>
             </div><br/>
           <div class="row">
